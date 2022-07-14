@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline-style: none;
+}
+
+.encabezado{
+    background: #E5E5E5;
+}
+
+.encabezado .iconoAlura{
+    padding: 1em;
+}
+
+.contenidoPrincipal{
+    background: #E5E5E5;
+}
+.cuadroEntradaTexto{
+    width: 100%;
+    height: 60%;
+    padding: 1em;
+}
+
+.cuadroIngresoTexto .cuadroEntradaTexto .ingresoTexto{
+    background: #E5E5E5;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+}
+
+
+.cuadroSalidaTexto{
+    background: white;
+    border-radius: 1em;
+}
+
+.munieco{
+    width: 70%;
+    height: 70%;
+}
