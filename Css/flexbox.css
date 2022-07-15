@@ -5,8 +5,6 @@ html, body{
 
 .cuerpo{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 
@@ -16,7 +14,6 @@ html, body{
 }
 
 .encabezado{
-    flex-shrink: 2;
     width: 10%;
 }
 
@@ -32,8 +29,8 @@ html, body{
 }
 
 .cuadroIngresoTexto, .cuadroSalidaTexto{
-    width: 40%;
     height: 90%;
+    width: 40%;
     align-items: center;
 }
 
@@ -41,7 +38,7 @@ html, body{
 .cuadroIngresoTexto{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 

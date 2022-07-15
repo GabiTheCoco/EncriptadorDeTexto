@@ -23,7 +23,6 @@
 .cuadroEntradaTexto{
     width: 100%;
     height: 60%;
-    padding: 1em;
 }
 
 .cuadroIngresoTexto .cuadroEntradaTexto .ingresoTexto{
@@ -41,7 +40,7 @@
 
 .restricciones .notificacion{
     width: 15px;
-    margin-right: 5px;;
+    margin-right: 5px;
 }
 
 .botones .cifrado, .botones .descifrado{
@@ -49,6 +48,7 @@
     height: 3em;   
     border-radius: 1em;
     font-size: 1em;
+    cursor: pointer;
 }
 
 .botones .cifrado:active, .botones .descifrado:active{
@@ -88,4 +88,72 @@
     width: 70%;
     text-align: center;
     color:#495057;
+}
+
+
+@media (max-width: 768px){
+    
+    .cuerpo{
+        flex-direction: column;
+        border:none;
+    }
+    
+    
+    .cuerpo .encabezado, .cuerpo .contenidoPrincipal{
+        width: auto;
+        height: 13%;
+        border: none;
+        box-shadow: none;
+    }
+
+    .cuerpo .contenidoPrincipal{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .contenidoPrincipal .cuadroIngresoTexto, .contenidoPrincipal .cuadroSalidaTexto{
+        height: 47%;
+        width: 80%;
+    }
+
+    .cuerpo .contenidoPrincipal .cuadroIngresoTexto .cuadroEntradaTexto{
+        padding: none;
+        width: 100%;
+    }
+
+    .cuadroIngresoTexto .cuadroEntradaTexto{
+        height: 60%;
+    }
+
+    .cuadroIngresoTexto .cuadroIngresoTexto-footer{
+        width: 100%;
+        height: 40%;
+    }
+
+    .cuadroIngresoTexto-footer .restricciones{
+        font-size: 0.7em;
+    }
+
+    .botones .cifrado, .botones .descifrado{
+        width: 7em;
+        height: 2em;
+    }
+
+    .contenidoPrincipal .cuadroSalidaTexto{
+
+    }
+
+    .cuadroSalidaTexto .munieco{
+        display: none;
+    }
+
+    .cuadroSalidaTexto .cuadroSalidaTexto-footer{
+        height: 80%;
+        text-align: center;
+    }
+
+    .cuadroSalidaTexto .p1, .cuadroSalidaTexto .p2{
+        height: 40%;
+        justify-content: space-between;
+    }
 }
