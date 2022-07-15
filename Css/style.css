@@ -98,12 +98,13 @@
         border:none;
     }
     
+    .cuerpo .encabezado{
+        z-index: 1;
+    }
     
     .cuerpo .encabezado, .cuerpo .contenidoPrincipal{
         width: auto;
         height: 13%;
-        border: none;
-        box-shadow: none;
     }
 
     .cuerpo .contenidoPrincipal{
