@@ -28,7 +28,7 @@
             <section class="cuadroIngresoTexto">
 
                 <div class="cuadroEntradaTexto">
-                    <textarea type="text" class="ingresoTexto" placeholder="Ingrese el texto aquí"></textarea>
+                    <textarea type="text" class="ingresoTexto" placeholder="Ingrese el texto aquí" name="textoACD" required></textarea>
                 </div>
                 
                 <section class="cuadroIngresoTexto-footer">
@@ -44,13 +44,13 @@
             
                     <div class="botones">
 
-                        <button type="button" class="cifrado">
+                        <button type="submit" class="cifrado" for="textoACD">
                             Encriptar
                         </button>
                 
-                        <button type="button" class="descifrado">
+                        <button type="submit" class="descifrado" for="textoACD">
                             Desencriptar
-                        </button>
+                        </button>   
 
                     </div>
             
@@ -62,9 +62,8 @@
             
                 <img class="munieco" src="Images/Muñeco.png">
             
-                <!-- <textarea name="impresionPanalla" id="salidaTexto" cols="30" rows="10"></textarea> -->
             
-                <div class="cuadroSalidaTexto-footer">
+                <!-- <div class="cuadroSalidaTexto-footer">
 
                     <p class="p1">
                         Ningún mensaje fue encontrado
@@ -73,7 +72,15 @@
                     <p class="p2">
                         Ingresa el texto que desees encriptar o desencriptar
                     </p>
-                </div>
+                </div> -->
+
+                <p class="p1">
+                    Ningún mensaje fue encontrado
+                </p>
+            
+                <p class="p2">
+                    Ingresa el texto que desees encriptar o desencriptar
+                </p>
             </section>
 
         </main>

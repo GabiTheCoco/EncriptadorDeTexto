@@ -72,10 +72,9 @@
 }
 
 .munieco{
-    width: 70%;
-    height: auto;
+    width: auto;
+    height: 50%;
 }
-
 
 .cuadroSalidaTexto .p1{
     color: #343A40;
@@ -86,20 +85,48 @@
 
 .cuadroSalidaTexto .p2{
     width: 70%;
+    height: 10%;
     text-align: center;
     color:#495057;
 }
 
+.invisible{
+    display: none;
+    justify-content: center;
+}
+
+.cuadroSalidaTexto .salidaTexto{
+    width: 80%;
+    height: 80%;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    resize: none;
+    border: none;
+}
+
+.cuadroSalidaTexto .botonCopiar{
+    width: 10em;
+    height: 3em;   
+    border-radius: 1em;
+    font-size: 1em;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+}
+
+.cuadroSalidaTexto .botonCopiar:active{
+    transform: translateY(-0.7px);
+}
 
 @media (max-width: 768px){
     
     .cuerpo{
         flex-direction: column;
-        border:none;
+        border: none;
     }
     
     .cuerpo .encabezado .iconoA{
-        z-index: 1;
+        z-index: 2;
     }
     
     .cuerpo .encabezado, .cuerpo .contenidoPrincipal{
@@ -140,21 +167,26 @@
         height: 2em;
     }
 
-    .contenidoPrincipal .cuadroSalidaTexto{
-
-    }
-
     .cuadroSalidaTexto .munieco{
         display: none;
     }
 
-    .cuadroSalidaTexto .cuadroSalidaTexto-footer{
-        height: 80%;
+    .cuadroSalidaTexto .p1, .cuadroSalidaTexto .p2{
+        height: 50%;
+        justify-content: space-between;
         text-align: center;
     }
 
-    .cuadroSalidaTexto .p1, .cuadroSalidaTexto .p2{
-        height: 40%;
-        justify-content: space-between;
+    .cuadroSalidaTexto .salidaTexto{
+        width: 80%;
+        height: 80%;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .cuadroSalidaTexto .botonCopiar{
+        width: 7em;
+        height: 2em;
     }
 }
