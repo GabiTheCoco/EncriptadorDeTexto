@@ -128,6 +128,10 @@ botonDescifrado.addEventListener("click", function(){
         invisible(elementosCuandoNoHayTexto);
         visible(elementosCuandoHayTexto);
 
+        //agregado del cuadro de texto y botones a la etiqueta padre .cuadroSalidaTexto (section)
+        cuadroSalidaTexto.appendChild(salidaTexto);
+        cuadroSalidaTexto.appendChild(botonCopiar);
+
         textoDescifrado = descifrado(cuadroEntradaTexto.value);
         salidaTexto.value = textoDescifrado;
         
