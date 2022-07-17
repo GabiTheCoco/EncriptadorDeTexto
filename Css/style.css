@@ -126,7 +126,7 @@
     }
     
     .cuerpo .encabezado .iconoA{
-        z-index: 2;
+        position: sticky;
     }
     
     .cuerpo .encabezado, .cuerpo .contenidoPrincipal{

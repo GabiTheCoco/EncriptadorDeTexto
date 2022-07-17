@@ -13,9 +13,8 @@ elementosCuandoHayTexto = [],
 textoCifrado = '', 
 textoDescifrado = ' ';
 
-const regExPermitido = /[a-z \s]/;
+const regExPermitido = /[a-z \s]/; //expresion reglar para buscar minusculas y espacios
 const regExMayus= /[A-Z0-9]/; //expresion regular para buscar mayúsculas o dígitos
-const regExEspeciales = / /; //expresion regular para buscar caracteres especiales 
 
 capturarElementos(); //captura los elementos a borrar de la pantalla
 
@@ -37,7 +36,6 @@ function cifrado(frase){
 }
 
 function descifrado(frase){
-    // var aux;
     for( let i=0; i<vocales.length; i++){
         frase = frase.replaceAll(encriptacion[i], vocales[i]);
     }
@@ -103,7 +101,7 @@ function visible(arregloDeElementos){
 
 botonCifrado.addEventListener("click", function(){
 
-    if((cuadroEntradaTexto.value !== "") && (regExPermitido.test(cuadroEntradaTexto)) && !(regExMayus.test(cuadroEntradaTexto.value))){
+    if((cuadroEntradaTexto.value !== "") && (regExPermitido.test(cuadroEntradaTexto.value)) && !(regExMayus.test(cuadroEntradaTexto.value))){
 
         invisible(elementosCuandoNoHayTexto);
         visible(elementosCuandoHayTexto);
