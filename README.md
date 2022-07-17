@@ -1,4 +1,3 @@
 # gabichecoco.github.io
-repositiorio provisional para algo
 
-noice
+Repositorio para el proyecto de encriptado y desencritpado Alura Latam - grupo 2
