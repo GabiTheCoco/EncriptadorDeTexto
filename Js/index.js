@@ -4,7 +4,7 @@ const botonDescifrado = document.querySelector(".descifrado"); //captura del bot
 const cuadroEntradaTexto = document.querySelector(".ingresoTexto"); //captura del cuadro de entrada de texto (textarea)
 const cuadroSalidaTexto = document.querySelector(".cuadroSalidaTexto"); //captura del cuadro de salida de texto (textarea)
 
-const letras = ["e", "i", "a", "o", "u"], encriptacion = ["enter", "imas", "ai", "ober", "ufat"]; //llave de encriptación
+const vocales = ["a", "e", "i", "o", "u"], encriptacion = ["ai", "enter", "imas", "ober", "ufat"]; //llave de encriptación
 
 var salidaTexto = crearCuadroSalidaTexto(), 
 botonCopiar = crearBotonCopiar(), 
@@ -13,26 +13,33 @@ elementosCuandoHayTexto = [],
 textoCifrado = '', 
 textoDescifrado = ' ';
 
+const regExPermitido = /[a-z \s]/;
 const regExMayus= /[A-Z0-9]/; //expresion regular para buscar mayúsculas o dígitos
-const regExEspeciales = /\W[ \t\r\n\f]/; //expresion regular para buscar caracteres especiales
+const regExEspeciales = / /; //expresion regular para buscar caracteres especiales 
 
 capturarElementos(); //captura los elementos a borrar de la pantalla
 
 
 
 function cifrado(frase){
+    var aux = '', indiceVocal;
 
-    for( let i=0; i<letras.length; i++){
-        frase = frase.replaceAll(letras[i], encriptacion[i]);
+    for( let i=0; i<frase.length; i++){
+        if (vocales.includes(frase[i])) {
+            indiceVocal = vocales.findIndex(elemento => elemento === frase[i]);
+            aux += encriptacion[indiceVocal];
+        }else{
+            aux+=frase[i];
+        }
     }
     
-    return frase;
+    return aux;
 }
 
 function descifrado(frase){
-
-    for( let i=0; i<letras.length; i++){
-        frase = frase.replaceAll(encriptacion[i], letras[i]);
+    // var aux;
+    for( let i=0; i<vocales.length; i++){
+        frase = frase.replaceAll(encriptacion[i], vocales[i]);
     }
 
     return frase;
@@ -96,7 +103,7 @@ function visible(arregloDeElementos){
 
 botonCifrado.addEventListener("click", function(){
 
-    if(cuadroEntradaTexto.value !== "" && !(regExMayus.test(cuadroEntradaTexto.value)) && !(regExEspeciales.test(cuadroEntradaTexto.value))){
+    if((cuadroEntradaTexto.value !== "") && (regExPermitido.test(cuadroEntradaTexto)) && !(regExMayus.test(cuadroEntradaTexto.value))){
 
         invisible(elementosCuandoNoHayTexto);
         visible(elementosCuandoHayTexto);
@@ -118,7 +125,7 @@ botonCifrado.addEventListener("click", function(){
 
 botonDescifrado.addEventListener("click", function(){
     //desencriptado
-    if(cuadroEntradaTexto.value !== "" && !(regExMayus.test(cuadroEntradaTexto.value)) && !(regExEspeciales.test(cuadroEntradaTexto.value))){
+    if((cuadroEntradaTexto.value !== "") && (regExPermitido.test(cuadroEntradaTexto.value) && !(regExMayus.test(cuadroEntradaTexto.value)))){
 
         invisible(elementosCuandoNoHayTexto);
         visible(elementosCuandoHayTexto);
